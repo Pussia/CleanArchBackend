@@ -24,7 +24,7 @@ public class PyMainSequenceService implements MainSequenceService {
         for (FileDetails file : fileDetails) {
             for (ImportDetails importDetails : file.getImportDetails()) {
                 for (FileDetails imported : importDetails.getImportedFiles()) {
-                    if (imported.getName().equals("__init__")) { //
+                    if (imported.getName().equals("__init__")) {
                         if (!(imported.getClassDetails().isEmpty() && imported.getFunctionDetails().isEmpty())) {
                             continue;
                         }
